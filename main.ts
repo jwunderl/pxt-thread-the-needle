@@ -1,11 +1,8 @@
-namespace SpriteKind {
-    export const Needle = SpriteKind.create()
-    export const Thread = SpriteKind.create()
-    export const NeedleTop = SpriteKind.create()
-}
-
 //% block="Thread" icon="\uf0d0"
 namespace threadtheneedle {
+    const NeedleTop = SpriteKind.create()
+    const Thread = SpriteKind.create()
+    const Needle = SpriteKind.create()
     //% block="thread the needle with $color"
     //% color.shadow=colorindexpicker
     //% color.defl=10
@@ -72,7 +69,7 @@ namespace threadtheneedle {
             . . . 
             . . . 
             . . . 
-            `, SpriteKind.NeedleTop)
+            `, NeedleTop)
         const mainNeedle = sprites.create(img`
             . . . 
             . . c 
@@ -132,7 +129,7 @@ namespace threadtheneedle {
             . c . 
             . c . 
             . 1 . 
-            `, SpriteKind.Needle)
+            `, Needle)
         needleHole.setPosition(140, 60)
         mainNeedle.setPosition(140, 60)
         mainNeedle.z = 10
@@ -175,7 +172,7 @@ namespace threadtheneedle {
         controller.moveSprite(hand, 300, 300)
         const threadDisplay = sprites.create(img`
             a a a a a a a a a a
-        `, SpriteKind.Thread)
+        `, Thread)
         hand.image.replace(10, color);
         threadDisplay.image.replace(10, color);
         spriteutils.createRenderable(

@@ -189,11 +189,13 @@ namespace threadtheneedle {
             threadDisplay.left = hand.right
             if (threadDisplay.overlapsWith(needleHole) || threadDisplay.overlapsWith(mainNeedle)) {
                 if (threadDisplay.overlapsWith(needleHole)) {
-                    if (hand.vx > 0 && threadDisplay.top > needleHole.top + 1) {
-                        threadDisplay.z = 5
-                    } else if (!isHittingNeedle) {
-                        threadDisplay.z = 15
-                        hand.z = 15;
+                    if (!isHittingNeedle) {
+                        if (!isHittingNeedle && hand.vx > 0 && threadDisplay.top > needleHole.top + 1) {
+                            threadDisplay.z = 5
+                        } else {
+                            threadDisplay.z = 15
+                            hand.z = 15;
+                        }
                     }
                 } else {
                     threadDisplay.z = 15

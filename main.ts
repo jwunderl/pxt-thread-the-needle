@@ -189,7 +189,7 @@ namespace threadtheneedle {
                 if (threadDisplay.overlapsWith(needleHole)) {
                     if (hand.vx > 0 && threadDisplay.top > needleHole.top + 1) {
                         threadDisplay.z = 5
-                    } else if (!(isHittingNeedle)) {
+                    } else if (!isHittingNeedle) {
                         threadDisplay.z = 15
                         hand.z = 15;
                     }
@@ -203,9 +203,6 @@ namespace threadtheneedle {
                 threadDisplay.z = 15
                 hand.z = 15;
             }
-            // if (threadDisplay.z == 5 && threadDisplay.right >= mainNeedle.right + 2) {
-            //     game.over(true)
-            // }
         })
         pauseUntil(() => 
             threadDisplay.overlapsWith(needleHole)

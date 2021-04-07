@@ -1,3 +1,5 @@
+//% block="Thread" icon="\uf0d0"
+//% color="#e649a2"
 namespace threadtheneedle {
     const NeedleTop = SpriteKind.create()
     const Thread = SpriteKind.create()
@@ -6,7 +8,6 @@ namespace threadtheneedle {
     //% block="thread the needle with $color"
     //% color.shadow=colorindexpicker
     //% color.defl=10
-    //% block="Thread" icon="\uf0d0"
     export function runGame(color: number) {
         game.pushScene();
         if (!color) {

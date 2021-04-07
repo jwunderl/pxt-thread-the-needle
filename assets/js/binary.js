@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.4.35/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.1","target":"arcade","targetVersion":"1.4.35","repo":"jwunderl/pxt-thread-the-needle"}
-// total=1178223 new=8.18% cached=86.33% other=5.49%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.4.35/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.2","target":"arcade","targetVersion":"1.4.35","repo":"jwunderl/pxt-thread-the-needle"}
+// total=1178222 new=8.18% cached=86.33% other=5.49%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -385,7 +385,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P70561(s) {
+function _main___P72485(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -761,7 +761,7 @@ switch (step) {
     s.callLocIdx = 65; s.pc = 33; return s.tmp_0;
   case 33:
     r0 = s.retval;
-    s.tmp_0 = threadtheneedle_runGame__P70377_mk(s);
+    s.tmp_0 = threadtheneedle_runGame__P72301_mk(s);
     s.tmp_0.arg0 = 10;
     s.callLocIdx = 66; s.pc = 34; return s.tmp_0;
   case 34:
@@ -770,28 +770,28 @@ switch (step) {
     s.callLocIdx = 67; s.pc = 35; return s.tmp_0;
   case 35:
     r0 = s.retval;
-    globals.Needle___70379 = (r0);
+    globals.NeedleTop___72303 = (r0);
     s.tmp_0 = SpriteKind_create__P18051_mk(s);
     s.callLocIdx = 68; s.pc = 36; return s.tmp_0;
   case 36:
     r0 = s.retval;
-    globals.Thread___70382 = (r0);
+    globals.Thread___72306 = (r0);
     s.tmp_0 = SpriteKind_create__P18051_mk(s);
     s.callLocIdx = 69; s.pc = 37; return s.tmp_0;
   case 37:
     r0 = s.retval;
-    globals.NeedleTop___70385 = (r0);
+    globals.Needle___72309 = (r0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P70561.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P70561.continuations = [  ]
+_main___P72485.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P72485.continuations = [  ]
 
-function _main___P70561_mk(s) {
+function _main___P72485_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P70561, depth: s.depth + 1,
+        parent: s, fn: _main___P72485, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1378,7 +1378,7 @@ function inline__P20349_mk(s) {
 
 
 
-function threadtheneedle_runGame__P70377(s) {
+function threadtheneedle_runGame__P72301(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1388,11 +1388,11 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.isHittingNeedle___70389 = undefined;
-    s.needleHole___70390 = undefined;
-    s.mainNeedle___70396 = undefined;
-    s.hand___70408 = undefined;
-    s.threadDisplay___70418 = undefined;
+    s.isHittingNeedle___72313 = undefined;
+    s.needleHole___72314 = undefined;
+    s.mainNeedle___72320 = undefined;
+    s.hand___72332 = undefined;
+    s.threadDisplay___72342 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
@@ -1402,40 +1402,40 @@ switch (step) {
   case 1:
     r0 = s.retval;
     r0 = pxsim_pxtrt.mklocRef();
-    s.isHittingNeedle___70389 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.isHittingNeedle___70389, false);
+    s.isHittingNeedle___72313 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.isHittingNeedle___72313, false);
     s.tmp_0 = sprites_create__P17889_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex70394);
+    r0 = pxsim.image.ofBuffer(_hex72318);
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.NeedleTop___70385;
+    s.tmp_0.arg1 = globals.NeedleTop___72303;
     s.callLocIdx = 71; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.needleHole___70390 = (r0);
+    s.needleHole___72314 = (r0);
     s.tmp_0 = sprites_create__P17889_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex70400);
+    r0 = pxsim.image.ofBuffer(_hex72324);
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.Needle___70379;
+    s.tmp_0.arg1 = globals.Needle___72309;
     s.callLocIdx = 72; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.mainNeedle___70396 = (r0);
+    s.mainNeedle___72320 = (r0);
     s.tmp_0 = Sprite_setPosition__P17994_mk(s);
-    s.tmp_0.arg0 = s.needleHole___70390;
+    s.tmp_0.arg0 = s.needleHole___72314;
     s.tmp_0.arg1 = 140;
     s.tmp_0.arg2 = 60;
     s.callLocIdx = 73; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P17994_mk(s);
-    s.tmp_0.arg0 = s.mainNeedle___70396;
+    s.tmp_0.arg0 = s.mainNeedle___72320;
     s.tmp_0.arg1 = 140;
     s.tmp_0.arg2 = 60;
     s.callLocIdx = 74; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
     s.tmp_0 = if_z_2_mk(s);
-    s.tmp_0.arg0 = s.mainNeedle___70396;
+    s.tmp_0.arg0 = s.mainNeedle___72320;
     s.tmp_0.arg1 = 10;
     if (!s.tmp_0.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapSetByString(s.tmp_0.arg0, "z", s.tmp_0.arg1);
@@ -1448,44 +1448,44 @@ switch (step) {
   case 6:
     r0 = s.retval;
     s.tmp_0 = sprites_create__P17889_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex70412);
+    r0 = pxsim.image.ofBuffer(_hex72336);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.Player___18052;
     s.callLocIdx = 76; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    s.hand___70408 = (r0);
+    s.hand___72332 = (r0);
     s.tmp_0 = Sprite_setPosition__P17994_mk(s);
-    s.tmp_0.arg0 = s.hand___70408;
+    s.tmp_0.arg0 = s.hand___72332;
     s.tmp_0.arg1 = 18;
     s.tmp_0.arg2 = 77;
     s.callLocIdx = 77; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P17867_mk(s);
-    s.tmp_0.arg0 = s.hand___70408;
+    s.tmp_0.arg0 = s.hand___72332;
     s.tmp_0.arg1 = 300;
     s.tmp_0.arg2 = 300;
     s.callLocIdx = 78; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
     s.tmp_0 = sprites_create__P17889_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex70422);
+    r0 = pxsim.image.ofBuffer(_hex72346);
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.Thread___70382;
+    s.tmp_0.arg1 = globals.Thread___72306;
     s.callLocIdx = 79; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
-    s.threadDisplay___70418 = (r0);
-    r0 = s.hand___70408.fields["_image"];
+    s.threadDisplay___72342 = (r0);
+    r0 = s.hand___72332.fields["_image"];
     s.tmp_0 = r0;
     r0 = pxsim_ImageMethods.replace(s.tmp_0, 10, s.arg0);
-    r0 = s.threadDisplay___70418.fields["_image"];
+    r0 = s.threadDisplay___72342.fields["_image"];
     s.tmp_0 = r0;
     r0 = pxsim_ImageMethods.replace(s.tmp_0, 10, s.arg0);
-    r0 = pxsim_pxtcore_mkAction(2, inline__P70437);
+    r0 = pxsim_pxtcore_mkAction(2, inline__P72361);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.hand___70408);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.hand___72332);
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.arg0);
     s.tmp_1 = spriteutils_createRenderable__P19468_mk(s);
     s.tmp_1.arg0 = -5;
@@ -1493,23 +1493,23 @@ switch (step) {
     s.callLocIdx = 85; s.pc = 11; return s.tmp_1;
   case 11:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(5, inline__P70449);
+    r0 = pxsim_pxtcore_mkAction(5, inline__P72373);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.threadDisplay___70418);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.hand___70408);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.needleHole___70390);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.mainNeedle___70396);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 4, s.isHittingNeedle___70389);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.threadDisplay___72342);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.hand___72332);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.needleHole___72314);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.mainNeedle___72320);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 4, s.isHittingNeedle___72313);
     s.tmp_1 = game_onUpdate__P18462_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.callLocIdx = 103; s.pc = 12; return s.tmp_1;
   case 12:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(3, inline__P70500);
+    r0 = pxsim_pxtcore_mkAction(3, inline__P72424);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.threadDisplay___70418);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.needleHole___70390);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.mainNeedle___70396);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.threadDisplay___72342);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.needleHole___72314);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.mainNeedle___72320);
     s.tmp_1 = pauseUntil__P16261_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = undefined;
@@ -1517,21 +1517,21 @@ switch (step) {
   case 13:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P17867_mk(s);
-    s.tmp_0.arg0 = s.hand___70408;
+    s.tmp_0.arg0 = s.hand___72332;
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 0;
     s.callLocIdx = 109; s.pc = 14; return s.tmp_0;
   case 14:
     r0 = s.retval;
     s.tmp_0 = Sprite_startEffect__P17997_mk(s);
-    s.tmp_0.arg0 = s.hand___70408;
+    s.tmp_0.arg0 = s.hand___72332;
     s.tmp_0.arg1 = globals.hearts___18721;
     s.tmp_0.arg2 = undefined;
     s.callLocIdx = 110; s.pc = 15; return s.tmp_0;
   case 15:
     r0 = s.retval;
     s.tmp_0 = if_z_2_mk(s);
-    s.tmp_0.arg0 = s.hand___70408;
+    s.tmp_0.arg0 = s.hand___72332;
     s.tmp_0.arg1 = 0;
     if (!s.tmp_0.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapSetByString(s.tmp_0.arg0, "z", s.tmp_0.arg1);
@@ -1556,32 +1556,32 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-threadtheneedle_runGame__P70377.info = {"start":338,"length":6288,"line":11,"column":4,"endLine":216,"endColumn":5,"fileName":"main.ts","functionName":"runGame","argumentNames":["color"]}
+threadtheneedle_runGame__P72301.info = {"start":291,"length":6255,"line":8,"column":4,"endLine":213,"endColumn":5,"fileName":"main.ts","functionName":"runGame","argumentNames":["color"]}
 
-function threadtheneedle_runGame__P70377_mk(s) {
+function threadtheneedle_runGame__P72301_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: threadtheneedle_runGame__P70377, depth: s.depth + 1,
+        parent: s, fn: threadtheneedle_runGame__P72301, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  isHittingNeedle___70389: undefined,
-  needleHole___70390: undefined,
-  mainNeedle___70396: undefined,
-  hand___70408: undefined,
-  threadDisplay___70418: undefined,
+  isHittingNeedle___72313: undefined,
+  needleHole___72314: undefined,
+  mainNeedle___72320: undefined,
+  hand___72332: undefined,
+  threadDisplay___72342: undefined,
   arg0: undefined,
 } }
 
-const _hex70394 = pxsim.BufferMethods.createBufferFromHex("870403003a000000c0cc0000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000c0cc000000000000000000000000000000000000000000000000000000000000")
-const _hex70400 = pxsim.BufferMethods.createBufferFromHex("870403003a0000000000cccccccccccccccccccccccccccccccccccccccccccccccccc0c000000000000cccccccccccccccccccccccccccccccccccc9c999999999999cc1c000000c0cccc9c99999999999999999999999999999999999999999999990900000000")
-const _hex70412 = pxsim.BufferMethods.createBufferFromHex("870430002100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000a00a000000000000000000000000000000000000a0000000000000000000000000000000000000a00a000000000000000000000000000000000000aa000000000000000000000000000000000000a0000000000000000000000000000000000000000a000000000000000000000000000000000000a000000000000000000000000000000000000000a0000000000000000000000000000000000000a00a000000000000000000000000000000000000a00000000000000000000000000000000000e0eeeeeeee0000000000000000000000000000e0eeddddddedee000000000000000000000000e0deddddddddddedee0e00000000000000000000e0dddddddddddddded0e00000000000000000000eedddddddddddddddd0e000000000000000000e0dedddddddddddddddd0e000000000000000000eedddddddddddddddddd0e0000000000000000e0dedddddddddddddddddd0e0000000000000000e0dddddddddddddddddddd0e0000000000000000eedddddddddddddddddddd0e00000000000000e0dedddddddddddddddddddd0e00000000000000eedddddddddddddddddddddd0e000000000000e0dedddddddddddddddddddded0e000000000000eeddddddeddedddddddddddded000000000000e0deddddddeededddddddddddded000000000000e0ddddddedeedddddddddddddded000000000000deddddddedeeddddddddddddddee000000000000deddddddeeddddeddddddddded0e000000000000de33ddedeeddddeedddddddded000000000000e0de33ddeededddddedddddddded000000000000e03d33edeeddddedddeddedddded000000000000e0dd33edeeddddeeddeedddddd0e00000000000000eedeeededdeddedddeddeded0e0000000000000000eeeeddddeeddedddeddeed0000000000000000aaaadedddddedddeddedddee0000000000000000eadeddddedddeddeeddedd0e00000000000000a0eadddddddeddeeddeddded0000000000000000aae0eeddeddeedeeddddeeee00000000000000000a00e0eeeeeeeee0eeee000000000000000000000a0000ee000000000000000000000000000000a00a000000000000000000000000000000000000aa000000000000000000000000000000000000000a000000000000000000000000000000000000000a000000000000000000000000000000000000000a00000000000000000000000000000000000000")
-const _hex70422 = pxsim.BufferMethods.createBufferFromHex("87040a00010000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000")
+const _hex72318 = pxsim.BufferMethods.createBufferFromHex("870403003a000000c0cc0000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000c0cc000000000000000000000000000000000000000000000000000000000000")
+const _hex72324 = pxsim.BufferMethods.createBufferFromHex("870403003a0000000000cccccccccccccccccccccccccccccccccccccccccccccccccc0c000000000000cccccccccccccccccccccccccccccccccccc9c999999999999cc1c000000c0cccc9c99999999999999999999999999999999999999999999990900000000")
+const _hex72336 = pxsim.BufferMethods.createBufferFromHex("870430002100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000a00a000000000000000000000000000000000000a0000000000000000000000000000000000000a00a000000000000000000000000000000000000aa000000000000000000000000000000000000a0000000000000000000000000000000000000000a000000000000000000000000000000000000a000000000000000000000000000000000000000a0000000000000000000000000000000000000a00a000000000000000000000000000000000000a00000000000000000000000000000000000e0eeeeeeee0000000000000000000000000000e0eeddddddedee000000000000000000000000e0deddddddddddedee0e00000000000000000000e0dddddddddddddded0e00000000000000000000eedddddddddddddddd0e000000000000000000e0dedddddddddddddddd0e000000000000000000eedddddddddddddddddd0e0000000000000000e0dedddddddddddddddddd0e0000000000000000e0dddddddddddddddddddd0e0000000000000000eedddddddddddddddddddd0e00000000000000e0dedddddddddddddddddddd0e00000000000000eedddddddddddddddddddddd0e000000000000e0dedddddddddddddddddddded0e000000000000eeddddddeddedddddddddddded000000000000e0deddddddeededddddddddddded000000000000e0ddddddedeedddddddddddddded000000000000deddddddedeeddddddddddddddee000000000000deddddddeeddddeddddddddded0e000000000000de33ddedeeddddeedddddddded000000000000e0de33ddeededddddedddddddded000000000000e03d33edeeddddedddeddedddded000000000000e0dd33edeeddddeeddeedddddd0e00000000000000eedeeededdeddedddeddeded0e0000000000000000eeeeddddeeddedddeddeed0000000000000000aaaadedddddedddeddedddee0000000000000000eadeddddedddeddeeddedd0e00000000000000a0eadddddddeddeeddeddded0000000000000000aae0eeddeddeedeeddddeeee00000000000000000a00e0eeeeeeeee0eeee000000000000000000000a0000ee000000000000000000000000000000a00a000000000000000000000000000000000000aa000000000000000000000000000000000000000a000000000000000000000000000000000000000a000000000000000000000000000000000000000a00000000000000000000000000000000000000")
+const _hex72346 = pxsim.BufferMethods.createBufferFromHex("87040a00010000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a0000000a000000")
 
 
 
 
-function inline__P70437(s) {
+function inline__P72361(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1621,12 +1621,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P70437.info = {"start":5349,"length":62,"line":182,"column":12,"endLine":182,"endColumn":74,"fileName":"main.ts","functionName":"inline","argumentNames":["scr"]}
+inline__P72361.info = {"start":5269,"length":62,"line":179,"column":12,"endLine":179,"endColumn":74,"fileName":"main.ts","functionName":"inline","argumentNames":["scr"]}
 
-function inline__P70437_mk(s) {
+function inline__P72361_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P70437, depth: s.depth + 1,
+        parent: s, fn: inline__P72361, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1639,7 +1639,7 @@ function inline__P70437_mk(s) {
 
 
 
-function inline__P70449(s) {
+function inline__P72373(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1852,12 +1852,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P70449.info = {"start":5445,"length":841,"line":184,"column":22,"endLine":205,"endColumn":9,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P72373.info = {"start":5365,"length":841,"line":181,"column":22,"endLine":202,"endColumn":9,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P70449_mk(s) {
+function inline__P72373_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P70449, depth: s.depth + 1,
+        parent: s, fn: inline__P72373, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1881,7 +1881,7 @@ function inline__P70449_mk(s) {
 
 
 
-function inline__P70500(s) {
+function inline__P72424(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1947,12 +1947,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P70500.info = {"start":6307,"length":152,"line":206,"column":19,"endLine":209,"endColumn":58,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P72424.info = {"start":6227,"length":152,"line":203,"column":19,"endLine":206,"endColumn":58,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P70500_mk(s) {
+function inline__P72424_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P70500, depth: s.depth + 1,
+        parent: s, fn: inline__P72424, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -40100,7 +40100,7 @@ const sprites_StaticObstacle__C18070_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["Needle___70379","Thread___70382","NeedleTop___70385"])
+const breakpoints = setupDebugger(1, ["NeedleTop___72303","Thread___72306","Needle___72309"])
 
-return _main___P70561
+return _main___P72485
 })

@@ -1,1 +1,1 @@
-threadtheneedle.runGame(10);
+threadtheneedle.runGame(0);

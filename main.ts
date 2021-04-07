@@ -3,11 +3,16 @@ namespace threadtheneedle {
     const NeedleTop = SpriteKind.create()
     const Thread = SpriteKind.create()
     const Needle = SpriteKind.create()
+
     //% block="thread the needle with $color"
     //% color.shadow=colorindexpicker
     //% color.defl=10
     export function runGame(color: number) {
         game.pushScene();
+        if (!color) {
+            color = 0xD;
+        }
+        scene.setBackgroundColor(color === 0xF ? 0xD : 0xF)
 
         let isHittingNeedle = false
         const needleHole = sprites.create(img`

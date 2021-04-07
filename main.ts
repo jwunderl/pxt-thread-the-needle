@@ -1,4 +1,3 @@
-//% block="Thread" icon="\uf0d0"
 namespace threadtheneedle {
     const NeedleTop = SpriteKind.create()
     const Thread = SpriteKind.create()
@@ -13,7 +12,11 @@ namespace threadtheneedle {
             color = 0xD;
         }
         scene.setBackgroundColor(color === 0xF ? 0xD : 0xF)
-
+        let cuttingMatImage =assets.image`cutting mat`.clone()
+        if (color == 6) {
+            cuttingMatImage.replace(6, 7)
+        }
+        scene.setBackgroundImage(cuttingMatImage)
         let isHittingNeedle = false
         const needleHole = sprites.create(img`
             . c . 

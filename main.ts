@@ -4,9 +4,8 @@ namespace SpriteKind {
     export const NeedleTop = SpriteKind.create()
 }
 
-//% block="Thread"
+//% block="Thread" icon="\uf0d0"
 namespace threadtheneedle {
-
     //% block="thread the needle with $color"
     //% color.shadow=colorindexpicker
     //% color.defl=10
